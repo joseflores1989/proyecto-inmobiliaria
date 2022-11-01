@@ -1,0 +1,545 @@
+
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Monserrat', sans-serif;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(252, 246, 239);
+    height: 20%;
+}
+
+.contenedor{
+    margin:auto;
+    width:90%;
+    padding-top:5%;
+}
+
+#logo-img{
+    width: 100%;
+}
+
+.my-button {
+    background-color: rgb(252, 246, 239);
+    border: 10px;
+    color: #008EAA;
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+    line-height: 70px;
+    display: none;
+  }
+
+.my-button:focus {
+  outline: none;
+}
+
+nav {
+    flex-wrap: wrap;
+    z-index: 5555;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none
+}
+
+nav ul li {
+    padding: 20px 20px;
+}
+
+nav ul li a {
+    color: #008EAA;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+
+}
+
+
+main{
+    background-color: rgb(224, 243, 255);
+    margin:0;
+}
+
+
+footer{
+    height: 5%;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(252, 246, 239);
+    color: #008EAA;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* ---- ---- ---- Contenedor título y controles---- ---- ----*/
+.contenedor-titulo h3, .vender-propiedad h3{
+    color: #008EAA;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 600;
+}
+
+.controles button{
+    align-items: center;
+    background: #fff;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border:none;
+    border-radius: 50%;
+    margin-right: 2px;
+    opacity: 0.3;
+}
+
+.controles button:hover,
+.controles button.activo{
+    background: #008EAA;
+}
+
+.contenedor-controles{
+    display: flex;
+}
+
+.controles{
+    margin: 0 auto;
+    padding: 3% 0;
+}
+/* ---- ---- ---- Contenedor principal y flechas  ---- ---- ----*/
+
+.casas-disponibles{
+    margin-bottom: 70px;
+    
+}
+
+.casas-disponibles .contenedor-principal{
+    display:flex;
+    align-items: center;
+    position:relative;
+}
+
+.casas-disponibles .contenedor-principal .flecha-izquierda,
+.casas-disponibles .contenedor-principal .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top:calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.casas-disponibles .contenedor-principal .flecha-izquierda{
+    left:0;
+}
+
+.casas-disponibles .contenedor-principal .flecha-derecha{
+    right: 0;
+}
+
+.casas-disponibles .contenedor-principal .flecha-izquierda:hover,
+.casas-disponibles .contenedor-principal .flecha-derecha:hover{
+    background: rgba(0,0,0,.9);
+}
+
+/* ---- ---- ---- Carrousel ---- ---- ----*/
+
+.casas-disponibles .contenedor-principal .contenedor-carrousel{
+    width:100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.casas-disponibles .contenedor-carrousel .carrousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.casas-disponibles .contenedor-carrousel .carrousel .casa{
+    min-width: 33%;
+    transition:.3 ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+}
+
+.casas-disponibles .contenedor-carrousel .carrousel .casa .capa{
+    position: absolute;
+    padding:20px 0;
+    top:19px;
+    width: 33%;
+    height:78%;
+    background: rgba(11,103,123,0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.casas-disponibles .contenedor-carrousel .carrousel .casa.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 0.3s;
+}
+
+.casas-disponibles .contenedor-carrousel .carrousel .casa .capa.hover{
+    opacity:1;
+    visibility: visible;
+}
+
+
+.casas-disponibles .contenedor-carrousel .carrousel .casa img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.contenedor-boton{
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+
+.vender-propiedad button{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #3018ba;  
+    transition: 500ms;
+    border: none;
+    cursor:default;
+}
+
+.vender-propiedad button:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+.vender-propiedad button a{
+    text-decoration: none;
+    cursor:default;
+    color: #ffffff;
+}
+
+
+/* ---- ---- ---- Contacto ---- ---- ----*/
+#form-contacto{
+    background-color: rgb(224, 243, 255);
+    display: flex;
+}
+
+.contacto{
+    padding: 0 13%;
+}
+
+.contacto__img_titulo-descipcion-form-boton{
+    padding: 5% 0;
+    display: flex;
+    flex-direction: row;  
+}
+
+.contacto__img_titulo-descipcion-form-boton img{
+    padding: 0 3%;
+    object-fit: cover;
+    max-width: 50%;
+}
+
+.contacto__titulo-descripcion h3{
+    padding-bottom: 2%;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-form__caja-texto{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+    display: flex;
+}   
+
+.contacto-form__caja-texto input{
+    width: 100%;
+    padding: 0 5px;
+    padding-top: 25px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 40px white inset !important;
+}
+
+
+.contacto-form__caja-texto label{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.contacto-form__caja-texto span::before{
+    content:'';
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.contacto-form__caja-texto input:focus ~ label, .contacto-form__caja-texto input:valid ~ label{
+    color: #2691d9;
+}
+
+.contacto-form__caja-texto input:focus ~ span::before, .contacto-form__caja-texto input:valid ~ span::before{
+    width: 100%;
+}
+
+.contacto-form__caja-texto:nth-last-child(2){
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+
+.contacto-form__caja-texto:nth-last-child(2) textarea{
+    width: 100%;
+    padding: 0 5px;
+    padding-top: 25px;
+    height: 90px;
+    font-size: 16px;
+    border: none;
+    background: white;
+    outline: none;
+    resize: none;
+    font-family:  'Questrial', sans-serif;
+}
+
+.contacto-form__caja-texto:nth-last-child(2) label{
+    position: absolute;
+    top: calc(50% - 46px);
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.contacto-form__caja-texto:nth-last-child(2) span::before{
+    content:'';
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.contacto-form__caja-texto textarea:focus ~ label, .contacto-form__caja-texto textarea:valid ~ label{
+    color: #2691d9;
+}
+
+.contacto-form__caja-texto textarea:focus ~ span::before, .contacto-form__caja-texto textarea:valid ~ span::before{
+    width: 100%;
+}
+
+.boton{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #3018ba;  
+    transition: 500ms;
+    border: none;
+}
+
+.boton:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+/* ---- ---- ---- Nosotros ---- ---- ----*/
+.presentacion{
+    padding: 0 13%;
+}
+.presentacion h1{
+    font-size: 3em;
+    text-align: center;
+    color: #008EAA;
+    padding: 5% 0;
+}
+
+.presentacion-1 h2, .presentacion-2 h2{
+    font-size: 2em;
+    padding: 5% 0;
+    text-align: justify;
+}
+
+#imagen-presentacion-1{
+    float: right;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 2%;
+    max-width: 50%;
+
+}
+
+#imagen-presentacion-2{
+    float: left;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 2%;
+    width: 100%;
+    max-width: 50%;
+}
+
+/* ---- ---- ---- Sucursales ---- ---- ----*/
+.sucursales-info{
+    padding: 2% 0;
+}
+
+.sucursales-info .sucursales{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sucursales-info h1{
+    color: #008EAA;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 3%;
+    font-weight: 600;
+}
+
+.sucursal{
+    text-align: center;
+}
+
+.sucursal h3{
+    font-weight: 600;
+    color: #008EAA;
+}
+
+.wrap{
+    max-width: 80%;
+    aspect-ratio: 1;
+}
+
+/* ---- ---- ---- Media Queries ---- ---- ----*/
+
+@media screen and (max-width: 800px) {
+
+    .casas-disponibles .contenedor-carrousel{
+        overflow: visible;
+    }
+
+    .casas-disponibles .contenedor-carrousel .carrousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+    }
+
+    .casas-disponibles .controles, .casas-disponibles .flecha-izquierda, .casas-disponibles .flecha-derecha{
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      nav ul.show {
+        display: flex;
+      }
+      
+      .my-button {
+        display: block;
+      }
+    nav {
+        background-color: rgb(62, 109, 149);
+    }
+    nav ul li a {
+        color: rgb(252, 246, 239);
+    }
+
+    .wrap{
+        height: 40%;
+    }
+
+    .sucursales-info .sucursales{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .sucursal{
+        padding-bottom: 5%;
+    }
+
+    .sucursales-info h1{
+        padding: 5% 0;
+        font-size: 1.5em;
+    }
+
+    .contacto__img_titulo-descipcion-form-boton img{
+        display: none;
+    }
+    .presentacion{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .presentacion-1{
+        display:flex;
+        flex-direction:column;
+    }
+    #imagen-presentacion-1, #imagen-presentacion-2{
+        float:none;
+    }
+    .presentacion-1 div, .presentacion-2 div{
+       text-align: center;
+    }
+
+}
+

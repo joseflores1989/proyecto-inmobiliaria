@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Sucursales</title>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0; background-color: rgb(224, 243, 255);}
+      .wrap { max-width: 75em; min-height: 40em; height:100%; width:100%; margin: 0 auto; padding-top: 2.5%; }
+      #map-canvas { height: 90%; }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true">
+    </script>
+    <script src="javascript/sucursales.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img id='logo-img' src='imagen/header-img.png'>
+        </div>
+        <nav>
+            <button class="my-button" id="my-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="mynav">
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='nosotros.html'>Nosotros</a></li>
+                <li><a href='contacto.html'>Contacto</a></li>
+                <li><a href='sucursales.html'>Sucursales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = 'sucursales-info'>
+        <h1>Nuestras Sucursales</h1>
+        <div class = 'sucursales'>
+            <div class = 'sucursal'>
+                <h3>Sucursal Av. Córdoba</h3>
+                <ul>
+                    <li>Av. Córdoba 3333</li>
+                    <li>Teéfono: 9999-9999</li>
+                    <li>Horario: 9 a 18 hs.</li>
+                </ul>
+            </div>
+            <div class = 'sucursal'>
+                <h3>Sucursal Av. Santa Fé</h3>
+                <ul>
+                    <li>Av. Santa Fé 3000</li>
+                    <li>Teéfono: 9999-9999</li>
+                    <li>Horario: 9 a 18 hs.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div id="map-canvas"></div>
+    </div>
+    <footer>
+        <p>Copyright</p>
+        <p>2022</p>
+    </footer>
+</body>
+<script src="javascript/validacion.js"></script>
+</html>

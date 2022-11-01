@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/styles.css'>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <img id='logo-img' src='imagen/header-img.png'>
+        </div>
+        <nav>
+            <button class="my-button" id="my-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="mynav">
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='nosotros.html'>Nosotros</a></li>
+                <li><a href='contacto.html'>Contacto</a></li>
+                <li><a href='sucursales.html'>Sucursales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id = "form-contacto">
+            <div class = "contacto">
+                <div class = "contacto__img_titulo-descipcion-form-boton">
+                        <img src = "imagen/contacto.webp" alt ="imagen contacto">
+
+                    <div class = "contacto__titulo-descripcion-form-boton">
+                        <div class = "contacto__titulo-descripcion">
+                            <h3>Contacto</h3>
+                            <p>Quiere contactarnos? Complete el siguiente formulario y un asesor se pondrá en contacto con usted a la brevedad.</p>
+                        </div>
+                        <form  id='form' class = "contacto__form">
+                                <div id = 'grupo__nombre' class = "contacto-form__caja-texto">
+                                    <input id='nombre' type="text" name = "nombre">
+                                    <span></span>
+                                    <label>Nombre</label>
+                                </div>
+                                <div class = "contacto-form__caja-texto">
+                                    <input id ='email' type="email" name = "email">
+                                    <span></span>
+                                    <label>Email</label>
+                                </div>
+                                <div class = "contacto-form__caja-texto">
+                                    <input id ='asunto' type="text" name = "asunto">
+                                    <span></span>
+                                    <label>Asunto</label>
+                                </div>
+                                <div class = "contacto-form__caja-texto">
+                                    <textarea id="message"  name = "message"></textarea>
+                                    <span></span>
+                                    <label>Mensaje</label>
+                                </div>
+                                <button type="submit" class = "boton">Enviar formulario</button>
+                        </form>  
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright</p>
+        <p>2022</p>
+    </footer>
+</body>
+<script src="javascript/validacion.js"></script>
+</html>
